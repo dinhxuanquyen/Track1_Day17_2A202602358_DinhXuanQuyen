@@ -3,7 +3,7 @@
 - MHV: 2A202602358
 - Họ tên: Đinh Xuân Quyền
 - Tên nhóm:  Prompt Kiếm Tông
-- Thành viên: Hoàng Quốc Dũng, Trần Đinh Hinh, Đinh Xuân Quyền
+- Thành viên: Hoàng Quốc Dũng, Trần Đình Hinh, Đinh Xuân Quyền
 - Case đã chọn: Case A — AI Tutor: Diagnostic Refresher
 
 # 2. Problem Hypothesis Brief (Kết quả Chặng 1)
