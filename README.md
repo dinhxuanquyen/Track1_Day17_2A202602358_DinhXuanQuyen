@@ -6,36 +6,104 @@
 - Thành viên: Hoàng Quốc Dũng, Trần Đình Hinh, Đinh Xuân Quyền
 - Case đã chọn: Case A — AI Tutor: Diagnostic Refresher
 
-# 2. Problem Hypothesis Brief (Kết quả Chặng 1)
 
-- **Solution directive:** Thêm nút “Tôi vẫn chưa hiểu” vào bài học. Khi học viên bấm nút, AI Tutor sử dụng nội dung bài hiện tại, các câu trả lời gần đây và lịch sử học tập để chẩn đoán, chọn một khái niệm nền và tạo phần giải thích ôn lại ngắn trước khi đưa học viên về bài đang học.
-- **Capability trung tính:** Khả năng chẩn đoán lỗ hổng kiến thức nền của người học khi họ đang gặp khó khăn và cung cấp ngay nội dung bổ trợ phù hợp.
-- **Các thay đổi được kỳ vọng (Change):**
-  1. Học viên nhận biết được việc mình không hiểu bài là do hổng kiến thức cũ.
-  2. Học viên chấp nhận dừng lại một nhịp để ôn lại kiến thức nền thay vì bỏ cuộc hoặc học vẹt.
-  3. Học viên lấp được lỗ hổng và tiếp tục hoàn thành bài học hiện tại.
-- **Actor:** Learner (Học viên) - Lý do: Họ là người trực tiếp trải nghiệm sự "không hiểu bài" và chịu hậu quả trực tiếp là sự nản chí hoặc bỏ cuộc.
-- **Situation & Job:** Khi đang bị mắc kẹt (không hiểu) ở một nội dung bài học mới, học viên đang cố gắng tìm cách hiểu bài bằng cách tự đọc lại nhiều lần, lật tìm bài cũ, lên Google hoặc hỏi bạn bè.
-- **JTBD Hypothesis:** Khi bị kẹt lại ở một khái niệm khó, tôi muốn nhanh chóng tìm ra phần kiến thức nền mình đang thiếu, để có thể hiểu bài và đi tiếp mà không bị nản chí.
-- **Problem Hypothesis (Giả thuyết chốt):** Khi không hiểu một phần bài học, học viên gặp khó khăn trong việc tự gỡ rối vì họ không biết chính xác mình đang bị hổng kiến thức nền nào, dẫn đến tốn thời gian lật tìm tài liệu một cách vô định hoặc nản chí bỏ cuộc.
-- **Điều kiện để giả thuyết đứng vững:** Học viên thực sự có nhận thức được mình "không hiểu", có ý thức muốn tìm cách giải quyết (không skip bài ngay) nhưng bị bế tắc do không biết bắt đầu ôn lại từ đâu.
-- **Điều gì có thể khiến nhóm sửa hoặc bác bỏ giả thuyết:** Khi phỏng vấn, học viên nói rằng khi không hiểu họ thường skip (bỏ qua) luôn, không quan tâm việc ôn lại; hoặc họ đã có cách dùng ChatGPT/Google tự gỡ rối rất nhanh và không hề thấy đó là khó khăn.
 
-# 3. Conversation Guide phiên bản cuối (Đã sửa sau khi luyện - Chặng 4)
+## 2. Problem Hypothesis Brief (Kết quả Chặng 1)
 
-- **Tiêu chí tuyển người:** Chúng tôi cần nói chuyện với người đã không hiểu một phần bài học và phải tìm cách xử lý trong vòng 7 ngày gần đây.
-- **Recruitment check:** Trong 1 tuần qua, có lúc nào bạn đang học mà bị kẹt lại vì không hiểu một phần nội dung bài không?
-- **Lời mở đầu:** Chào bạn, nhóm mình đang làm một bài tập nghiên cứu về trải nghiệm học tập. Mình muốn nghe về cách bạn xử lý khi gặp khó khăn trong lúc học. Buổi phỏng vấn không có câu trả lời đúng sai, mình chỉ muốn lắng nghe câu chuyện thực tế của bạn thôi.
-- **Story opener:** Kể mình nghe về lần gần nhất bạn đang học mà thấy mình không hiểu bài. Lúc đó bạn đang học môn gì, ở hoàn cảnh nào?
-- **Big 3 Questions:**
-  1. Lúc phát hiện ra mình không hiểu bài, bạn đã thực sự làm gì tiếp theo?
-  2. Việc tìm cách hiểu lại phần đó mất của bạn bao lâu? Điều gì cản trở bạn nhiều nhất trong lúc đó?
-  3. Sau khi thử các cách đó (hoặc bỏ cuộc), chuyện gì đã xảy ra tiếp theo với tiến độ học của bạn?
-- **Probe bank:**
-  - “Lúc đó chuyện gì xảy ra tiếp theo?”
-  - “Vì sao bạn lại chọn cách Google/hỏi bạn bè... thay vì cách khác?”
-  - “Kết quả của việc đó là gì?”
-  - “Nếu không tìm được câu trả lời thì sao?”
+### 2.1. Solution — Gỡ solution khỏi hình thức cụ thể
+
+- **Solution directive (Nguyên văn Case A):** Thêm nút “Tôi vẫn chưa hiểu” vào bài học. Khi học viên bấm nút, AI Tutor sử dụng nội dung bài hiện tại, các câu trả lời gần đây và lịch sử học tập để: 1. Đặt 2–3 câu hỏi chẩn đoán ngắn. 2. Chọn một khái niệm nền để học viên ôn lại. 3. Tạo một phần giải thích ngắn. 4. Đưa học viên trở về bài đang học.
+- **Capability trung tính:** Cung cấp sự hỗ trợ tức thời để chẩn đoán và khắc phục lỗ hổng kiến thức nền tảng ngay tại điểm người học gặp khó khăn, giúp họ tiếp tục tiến độ học tập.
+
+### 2.2. Change — Chuỗi thay đổi được kỳ vọng
+
+`Solution (Chẩn đoán & ôn kiến thức nền tại chỗ) → Người học phát hiện được gốc rễ phần kiến thức bị hổng và hiểu bài ngay → Không bị gián đoạn mạch học, không nản chí → Outcome (Tăng tỉ lệ hoàn thành bài học, hiểu bài sâu sắc và tự tin hơn)`
+
+- **Các thay đổi được kỳ vọng:**
+  1. Người học nhận diện được chính xác khái niệm tiên quyết (prerequisite) mà mình đang thiếu thay vì đoán mò.
+  2. Thời gian loay hoay tìm kiếm tài liệu giải thích giảm từ hàng chục phút xuống chỉ còn vài phút.
+  3. Người học giảm cảm giác hoang mang, sợ tụt hậu và không bỏ cuộc giữa chừng.
+
+### 2.3. Actor — Xác định các nhóm người liên quan
+
+| Actor                                                 | Họ đang làm gì?                           | Pain hoặc hậu quả có thể có                                                           | Họ hưởng lợi thế nào?                                      |
+| :---------------------------------------------------- | :-------------------------------------------- | :------------------------------------------------------------------------------------------ | :--------------------------------------------------------------- |
+| **Learner (Học viên)** *(Chọn điều tra)* | Tự học hoặc nghe giảng, làm bài tập    | Kẹt bài, không biết mình hổng chỗ nào, sợ tụt lùi, nản chí                     | Được gỡ rối tức thì, theo kịp bài học                  |
+| **Instructor / Giảng viên**                   | Soạn bài, giảng bài, trả lời thắc mắc | Bị quá tải khi nhiều học viên hỏi cùng câu hỏi cơ bản, ngắt quãng giờ giảng | Giảm tải việc giải đáp lặp đi lặp lại kiến thức nền |
+| **Course Designer / Platform**                  | Tối ưu nội dung khóa học                 | Tỷ lệ drop-off cao ở các bài tập/khái niệm khó                                     | Tăng retention rate và mức độ hài lòng của người học  |
+
+- **Actor nhóm chọn để điều tra trước:** Learner (Người học trực tiếp).
+- **Vì sao chọn nhánh này:** Learner là người trực tiếp trải nghiệm sự bế tắc và chịu hậu quả trực tiếp (mất động lực, tụt hậu, bỏ học). Nếu không hiểu rõ hành vi tự xoay xở của learner thì mọi giải pháp hỗ trợ đều vô nghĩa.
+
+### 2.4. Situation & Job
+
+- **Mô tả Situation & Job:** Khi đang học bài mới và gặp một khái niệm hoặc bài tập khó hiểu, người học đang cố gắng tự hiểu và vượt qua điểm nghẽn bằng cách đọc lại tài liệu, tra cứu mạng hoặc hỏi người khác.
+- **JTBD Hypothesis:** Khi gặp một khái niệm hoặc bài tập không hiểu trong lúc học, tôi muốn nhanh chóng gỡ rối và nắm được bản chất vấn đề, để có thể tiếp tục mạch học mà không bị nản chí hay tụt lùi so với tiến độ.
+
+### 2.5. Pain — Hai cách giải thích cạnh tranh
+
+- **Pain Hypothesis A (Giả thuyết kiến thức nền - Nhóm chọn):** Khi gặp một khái niệm/bài tập khó, người học gặp khó khăn trong việc hoàn thành bài học vì **không tự xác định được lỗ hổng kiến thức nền tảng của mình** (không biết những gì mình không biết), dẫn đến việc tra cứu mông lung, mất nhiều thời gian và dễ nản chí bỏ cuộc.
+- **Pain Hypothesis B (Giả thuyết cách diễn đạt/tài liệu - Cạnh tranh):** Khi gặp khái niệm khó, người học không hiểu bài là vì **cách diễn đạt của giảng viên/tài liệu quá trừu tượng hoặc thiếu trực quan**, chứ không phải do thiếu kiến thức nền; chỉ cần một ví dụ minh họa trực quan hoặc một góc nhìn giải thích khác là hiểu ngay.
+- **Giả thuyết nhóm chọn để điều tra trước:** Hypothesis A.
+- **Lý do chọn:** Hypothesis A phản ánh giả định cốt lõi của tính năng "Diagnostic Refresher" (cần chẩn đoán kiến thức nền). Cần kiểm tra xem người học thực sự kẹt do kiến thức nền hay do nguyên nhân khác.
+
+### 2.6. Evidence — Xác định điều cần tìm trước khi viết câu hỏi
+
+| Cần kiểm tra                  | Evidence làm nhóm tin hơn                                                                                       | Evidence làm nhóm nghi ngờ hoặc bác bỏ                                                                               |
+| :------------------------------ | :----------------------------------------------------------------------------------------------------------------- | :------------------------------------------------------------------------------------------------------------------------- |
+| **Situation có thật**   | User nhớ rõ tình huống gần đây (môn học cụ thể, slide/bài tập cụ thể) bị tắc nghẽn kiến thức.  | User nói chung chung: "Lúc nào khó thì mình hỏi bạn", không nhớ được sự kiện cụ thể nào trong tuần qua. |
+| **Pain có ý nghĩa**    | Bị kẹt thật sự, cảm thấy bối rối, sợ tụt hậu, tốn nhiều thời gian xoay xở hoặc bỏ dở bài học.  | Thấy bình thường, lướt qua luôn không cần hiểu, không ảnh hưởng gì tới việc học.                         |
+| **Workaround tồn tại**  | Đã chủ động thử nhiều cách: đọc lại slide, tra cứu từ khóa, hỏi AI, hỏi bạn bè, xem YouTube...   | Ngồi đợi hoặc không làm gì cả; có gia sư/người kèm 1-1 giải đáp ngay lập tức.                            |
+| **Consequence tồn tại** | Mất nhiều thời gian, lo lắng, hoang mang, mất mạch bài giảng phía sau.                                    | Không có hậu quả gì, bài thi vẫn qua bình thường dù bỏ qua đoạn đó.                                        |
+| **Pattern có lặp**      | Tình trạng này xảy ra định kỳ mỗi khi gặp kiến thức mới hoặc học môn có tính logic/kế thừa cao. | Chỉ là sự cố hãn hữu một lần duy nhất do lỗi mạng hoặc tài liệu in mờ.                                      |
+
+- **Điều gì phải đúng để giả thuyết đứng vững:** Người học thực sự có nỗ lực tự xoay xở khi kẹt bài, và việc không nhận diện được căn nguyên lỗ hổng kiến thức là rào cản chính khiến họ mất thời gian.
+- **Điều gì có thể khiến nhóm sửa/bác bỏ giả thuyết:** Nếu người học thực tế biết rõ mình thiếu gì và chỉ cần ví dụ minh họa (ủng hộ Pain B); hoặc người học bị cản trở bởi rào cản xã hội/tâm lý (ngại làm phiền người khác) hơn là thiếu khả năng tự chẩn đoán.
+
+### 2.7. Solution Parking Lot
+
+1. **[AI]** Diagnostic Refresher: Đặt câu hỏi chẩn đoán và tóm tắt kiến thức nền tự động (theo directive gốc).
+2. **[AI]** Multi-perspective Explainer: Tự động diễn giải lại đoạn văn bản/slide khó hiểu theo 3 cấp độ (cho người mới bắt đầu, ví dụ đời thực, ẩn dụ so sánh).
+3. **[Không dùng AI]** Prerequisite Map & Glossary: Sơ đồ tri thức đính kèm cuối mỗi slide/bài học, gắn link nhảy thẳng về khái niệm nền tiên quyết cần nhớ.
+4. **[Không dùng AI]** Anonymous Question Box: Nút bấm gửi câu hỏi ẩn danh tức thời đến giảng viên/trợ giảng trong lớp để tránh ngại ngùng làm phiền lớp học.
+5. **[AI]** In-lecture Silent Buddy: AI bot trực tiếp giải nghĩa từ khóa/slide ngay trên giao diện học tập theo thời gian thực mà không ngắt quãng bài giảng.
+
+---
+
+## 3. Conversation Guide phiên bản cuối (Đã sửa sau khi luyện - Chặng 2 & 4)
+
+### 3.1. Big 3 Điều quan trọng nhất cần học
+
+| Điều cần học                                    | Evidence cần tìm                                                                                  | Điều gì khiến nhóm xem lại giả thuyết?                                                               |
+| :-------------------------------------------------- | :-------------------------------------------------------------------------------------------------- | :----------------------------------------------------------------------------------------------------------- |
+| **1. Hành vi xoay xở đầu tiên**          | Hành động tức thời khi gặp chỗ khó (tự đọc lại, search, hỏi ai...).                    | Bỏ qua luôn hoặc có sẵn người kèm giải đáp ngay mà không cần tự mày mò.                     |
+| **2. Quá trình & Rào cản tự tìm hiểu** | Cách họ tra cứu, vì sao chọn công cụ đó thay vì hỏi người khác; rào cản gặp phải. | Dễ dàng tìm ra lời giải đáp trong vài giây mà không gặp bất kỳ khó khăn hay nhầm lẫn nào. |
+| **3. Cảm xúc & Hậu quả thực tế**        | Cảm giác bế tắc, áp lực tâm lý, thời gian tiêu tốn, mức độ hiểu bài cuối cùng.    | Coi việc không hiểu là chuyện nhỏ, không ảnh hưởng gì đến tiến độ hay tâm lý.              |
+
+### 3.2. Nội dung Conversation Guide
+
+- **Tiêu chí tuyển người:** Cần nói chuyện với người đang đi học/tự học đã có lúc không hiểu một phần bài học và phải tìm cách xử lý trong vòng 7 ngày gần đây.
+- **Recruitment check:** "Trong tuần qua, bạn có lúc nào đang học (trên trường, tự học online...) mà đọc/xem tài liệu nhưng bị khựng lại vì không hiểu một phần nội dung không?"
+- **Lời mở đầu:**
+  > "Chào bạn, nhóm mình đang làm một bài thực hành nghiên cứu về hành vi học tập. Mình muốn lắng nghe một câu chuyện thực tế gần đây của bạn về cách bạn xử lý khi gặp khó khăn lúc học. Cuộc trò chuyện rất thoải mái, không có đúng sai và chỉ mất tầm 10-15 phút thôi. Bạn cho mình xin phép ghi âm lại để về nhóm nghe lại nhé?"
+  > *(TUYỆT ĐỐI KHÔNG NÓI: Nhóm mình đang làm AI chẩn đoán kiến thức, bạn thấy tính năng này thế nào).*
+  >
+- **Story opener (Neo vào sự kiện cụ thể gần nhất):**
+  > "Kể mình nghe về lần gần nhất bạn đang học mà tự nhiên thấy mình không hiểu bài đi. Lúc đó bạn đang học môn gì, ở hoàn cảnh nào (tự học hay đang ngồi trên lớp)?"
+  >
+- **Big 3 Questions (Hỏi đào sâu hành vi quá khứ):**
+  1. *Hành vi xoay xở:* "Lúc tự nhiên thấy không hiểu đoạn đó, phản xạ đầu tiên của bạn là làm gì tiếp theo?"
+  2. *Chi tiết quá trình:* "Tại sao bạn lại ưu tiên xử lý theo hướng đó thay vì các phương án khác (như hỏi thầy cô, hỏi bạn bè)?"
+  3. *Hậu quả & Cảm xúc:* "Sau khi làm cách đó, bạn có hiểu được trọn vẹn phần đó không? Cảm giác của bạn lúc bị kẹt và sau khi giải quyết xong như thế nào?"
+- **Probe bank (Đào sâu khi user trả lời ngắn):**
+  - "Lúc đó chuyện gì xảy ra tiếp theo?"
+  - "Bạn đã làm điều đó như thế nào?"
+  - "Việc đó làm mất của bạn bao nhiêu thời gian?"
+  - "Nếu bỏ qua đoạn đó thì sẽ ảnh hưởng gì đến đoạn sau?"
+- **3 Phản xạ khi dữ liệu bắt đầu lệch chuẩn The Mom Test:**
+  - *Khi user khen ngợi:* **Deflect** — Cảm ơn ngắn gọn rồi kéo về hành vi thực tế ("Cảm ơn bạn, mà ở lần gần nhất học bài đó thì bạn đã làm thế nào?").
+  - *Khi user nói chung chung / tương lai:* **Anchor** — Kéo về quá khứ ("Lần gần nhất chuyện đó xảy ra cụ thể là hôm nào?").
+  - *Khi user hiến kế / feature request:* **Dig** — Tìm hiểu gốc rễ nỗi đau ("Ý tưởng đó sẽ giúp bạn làm được gì mà hiện tại bạn chưa làm được?").
 
 # 4. Practice Reflection (Chặng 4)
 
