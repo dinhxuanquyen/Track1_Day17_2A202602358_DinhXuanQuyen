@@ -52,4 +52,4 @@
   - Định hướng framework và rà soát logic reverse từ Solution về Problem Hypothesis (Chặng 1 & Chặng 2).
   - Xử lý dữ liệu thô từ transcript phỏng vấn (Chặng 4): tự động phân tích và trích xuất user profile, pain points, workarounds và các exact quotes đắt giá.
 - **Điểm sai/hời hợt của AI (nếu có):** AI đôi khi phân tích các câu trả lời thô có xu hướng sa đà vào việc đề xuất giải pháp (tính năng mới) thay vì tập trung đào sâu vào nỗi đau (pain point) và cảm xúc thực sự của người dùng.
-- **Cách tự sửa:** Người thực hiện đã rà soát và review lại các bản tóm tắt của AI, đối chiếu với transcript/file ghi âm gốc để điều chỉnh lại góc nhìn, đảm bảo chỉ giữ lại những insight tập trung vào hành vi và khó khăn thực tế của user.
+- **Cách tự sửa:** Đã rà soát và review lại các bản tóm tắt của AI, đối chiếu với transcript/file ghi âm gốc để điều chỉnh lại góc nhìn, đảm bảo chỉ giữ lại những insight tập trung vào hành vi và khó khăn thực tế của user.
